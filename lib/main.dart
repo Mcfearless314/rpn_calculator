@@ -35,9 +35,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   late List<int> _list;
 
-  String get something => "Hey";
+  String get something => "";
 
-  String get somethingElse => "du";
+  String get somethingElse => "";
 
   @override
   Widget build(BuildContext context) {
@@ -77,6 +77,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("1"),
                   ),
@@ -84,6 +89,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("2"),
                   ),
@@ -91,6 +101,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("3"),
                   ),
@@ -98,6 +113,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor:
+                          MaterialStatePropertyAll<Color>(Colors.yellowAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("÷"),
                   ),
@@ -105,6 +125,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("4"),
                   ),
@@ -112,6 +137,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent),  foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("5"),
                   ),
@@ -119,6 +149,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("6"),
                   ),
@@ -126,6 +161,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor:
+                          MaterialStatePropertyAll<Color>(Colors.yellowAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("x"),
                   ),
@@ -133,6 +173,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("7"),
                   ),
@@ -140,6 +185,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent),
+                      foregroundColor:
+                      MaterialStatePropertyAll<Color>(Colors.black),                    ),
                     onPressed: () {},
                     child: const Text("8"),
                   ),
@@ -147,6 +197,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("9"),
                   ),
@@ -154,6 +209,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor:
+                          MaterialStatePropertyAll<Color>(Colors.yellowAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
                     child: const Text("-"),
                   ),
@@ -161,8 +221,50 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor:
+                          MaterialStatePropertyAll<Color>(Colors.redAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
                     onPressed: () {},
-                    child: const Text(""),
+                    child: const Text("C"),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightBlueAccent), foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
+                    onPressed: () {},
+                    child: const Text("0"),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor:
+                          MaterialStatePropertyAll<Color>(Colors.yellowAccent),foregroundColor:
+                    MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
+                    onPressed: () {},
+                    child: const Text(","),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: ElevatedButton(
+                    style: const ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Colors.lightGreenAccent),
+                      foregroundColor:
+                          MaterialStatePropertyAll<Color>(Colors.black),
+                    ),
+                    onPressed: () {},
+                    child: const Text("ENTER"),
                   ),
                 ),
               ],
