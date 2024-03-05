@@ -1,30 +1,43 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+import 'dart:math';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:rpn_calculator/BLL/calc.dart';
 
-import 'package:rpn_calculator/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyCalculator());
+  test('Testing addition', () {
+    final stack = [5, 5];
+    AddCommand().apply(stack);
+    expect(stack, [10]);
+  });
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  test('Testing subtraction', () {
+    final stack = [10, 5];
+    SubCommand().apply(stack);
+    expect(stack, [5]);
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  test('Testing multiplication', () {
+    final stack = [10, 5];
+    MultiCommand().apply(stack);
+    expect(stack, [50]);
+  });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  test('Testing division', () {
+    final stack = [10, 5];
+    DivCommand().apply(stack);
+    expect(stack, [2]);
+  });
+
+  test('Testing SquareRoot', () {
+    final List<double>  stack = [25];
+    SqrtCommand().apply(stack);
+    expect(stack, [5.0]);
+  });
+
+  test('Testing Power of', () {
+    final stack = [5,2];
+    PowCommand().apply(stack);
+    expect(stack, [25.0]);
   });
 }

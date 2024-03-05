@@ -18,7 +18,7 @@ class SubCommand implements Command {
   void apply(List<num> stack) {
     num a = stack.removeLast();
     num b = stack.removeLast();
-    stack.add(a - b);
+    stack.add(b - a);
   }
 }
 
@@ -36,7 +36,8 @@ class DivCommand implements Command {
   void apply(List<num> stack) {
     num a = stack.removeLast();
     num b = stack.removeLast();
-    stack.add(a / b);
+    num c = (b~/a);
+    stack.add(c);
   }
 }
 
@@ -45,7 +46,7 @@ class PowCommand implements Command {
   void apply(List<num> stack) {
     num a = stack.removeLast();
     num b = stack.removeLast();
-    num c = pow(a, b);
+    num c = pow(b, a);
     stack.add(c);
   }
 }
